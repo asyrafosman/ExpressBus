@@ -57,6 +57,40 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\actions.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\bootstrap-datetimepicker.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bootstrap.min_1.js" />
+    <Content Include="js\bootstrap_1.js" />
+    <Content Include="js\builder.js" />
+    <Content Include="js\chart.js" />
+    <Content Include="js\demo_charts_morris.js" />
+    <Content Include="js\demo_charts_nvd3.js" />
+    <Content Include="js\demo_charts_rickshaw.js" />
+    <Content Include="js\demo_dashboard.js" />
+    <Content Include="js\demo_dashboard_x.js" />
+    <Content Include="js\demo_dashboard_x_dark.js" />
+    <Content Include="js\demo_edit_profile.js" />
+    <Content Include="js\demo_file_handling.js" />
+    <Content Include="js\demo_icons.js" />
+    <Content Include="js\demo_maps.js" />
+    <Content Include="js\demo_sliders.js" />
+    <Content Include="js\demo_tables.js" />
+    <Content Include="js\demo_tasks.js" />
+    <Content Include="js\faq.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.seat-charts.min.js" />
+    <Content Include="js\locales.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\moment-with-locales.min.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\portlet.js" />
+    <Content Include="js\settings.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
