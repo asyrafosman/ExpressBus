@@ -91,6 +91,11 @@
     <Content Include="js\plugins.js" />
     <Content Include="js\portlet.js" />
     <Content Include="js\settings.js" />
+    <Content Include="js\vendor\bootstrap.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="js\vendor\npm.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
