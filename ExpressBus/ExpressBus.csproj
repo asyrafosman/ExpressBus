@@ -156,6 +156,9 @@
     <Content Include="css\theme-night.css" />
     <Content Include="css\theme-serenity-head-light.css" />
     <Content Include="css\theme-serenity.css" />
+    <Content Include="fonts\BebasNeue-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular_1.svg" />
     <Content Include="js\actions.js" />
     <Content Include="js\app.js" />
     <Content Include="js\bootstrap-datetimepicker.min.js" />
@@ -649,6 +652,17 @@
     <Content Include="css\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="css\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="css\forms-material\forms-material.less" />
+    <Content Include="fonts\BebasNeue-webfont.eot" />
+    <Content Include="fonts\BebasNeue-webfont.ttf" />
+    <Content Include="fonts\BebasNeue-webfont.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular_1.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular_1.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular_1.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular_1.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
