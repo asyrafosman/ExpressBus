@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ExpressBusDB.mdf" />
+    <Content Include="App_Data\ExpressBusDB_log.ldf">
+      <DependentUpon>ExpressBusDB.mdf</DependentUpon>
+    </Content>
     <Content Include="css\animate\animate.css" />
     <Content Include="css\animate\animate.min.css" />
     <Content Include="css\blueimp\blueimp-gallery.min.css" />
