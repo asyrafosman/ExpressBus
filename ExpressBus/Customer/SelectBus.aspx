@@ -51,11 +51,11 @@
 
             @font-face {
                 font-family: 'BebasNeueRegular';
-                src: url('fonts/BebasNeue-webfont.eot');
-                src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-                    url('fonts/BebasNeue-webfont.woff') format('woff'),
-                    url('fonts/BebasNeue-webfont.ttf') format('truetype'),
-                    url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+                src: url('../fonts/BebasNeue-webfont.eot');
+                src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+                    url('../fonts/BebasNeue-webfont.woff') format('woff'),
+                    url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+                    url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
                 font-weight: normal;
                 font-style: normal;
 
@@ -128,6 +128,8 @@
         <link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/jquery/CSS3-digital-clock/index.html" />
     </head>
     <body>
+        <form runat ="server">
+
         <h1 style="font-family:'BebasNeueRegular'">Sedap Ekspress Sdn Bhd<small><c:choose>  
                     <c:when test="${sessionScope.customersession == null}">
                         <a href="contact.jsp">Contact</a> | 
@@ -174,13 +176,15 @@
                     </thead>
                     <tbody>
                         <tr class="success">
-                            <td><div style="color:black">1</div></td>
-                            <td><div style="color:black"><c:out value= "${sessionScope.date}" /></div></td>
-                            <td><div style="color:black"><c:out value= "${sessionScope.time1}" /></div></td>
-                            <td><div style="color:black"><c:out value= "${sessionScope.origin}" /></div></td>
-                            <td><div style="color:black"><c:out value= "${sessionScope.destination}" /></div></td>
-                            <td><div style="color:black"><c:out value= "${requestScope.available}" /></td>
-                            <td><div style="color:black"><a href="InsertTimeServlet?time=<c:out value= '${sessionScope.time1}' />" class="btn btn-primary btn-xs">Select Seat</a></div></td>
+                            <td><div> style="color:black">1</div></td>
+                            <td><div> style="color:black"><c:out value= "${sessionScope.date}" /></div></td>
+                            <td><div> style="color:black"><c:out value= "${sessionScope.time1}" /></div></td>
+                            <td><div> style="color:black"><c:out value= "${sessionScope.origin}" /></div></td>
+                            <td><div> style="color:black"><c:out value= "${sessionScope.destination}" /></div></td>
+                            <td><div> style="color:black"><c:out value= "${requestScope.available}" /></div></td>
+                            <td>
+                            <asp:Button ID="Button1" class="btn btn-primary btn-xs" runat="server" Text="Select Seat" OnClick="Button1_Click" />
+                                </td>
                         </tr>
                         <tr class="danger">
                             <td><div style="color:black">2</div></td>
@@ -204,7 +208,8 @@
                 </table> 
             </div>
         </div>
-        <hr>
+       
+    </form>
         <!-- Footer -->
         <footer>
             <div class="row">

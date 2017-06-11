@@ -10,7 +10,7 @@
 namespace ExpressBus.Customer {
     
     
-    public partial class SelectBus {
+    public partial class SelectSeat {
         
         /// <summary>
         /// Button1 control.
