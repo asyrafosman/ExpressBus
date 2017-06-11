@@ -132,7 +132,7 @@
     <Content Include="css\full.css" />
     <Content Include="css\fullcalendar\fullcalendar.css" />
     <Content Include="css\half-slider.css" />
-    <Content Include="css\introjs\introjs.min.css" />
+    <Content Include="css\fullcalendar\introjs\introjs.min.css" />
     <Content Include="css\ion\ion.rangeSlider.css" />
     <Content Include="css\ion\ion.rangeSlider.skinFlat.css" />
     <Content Include="css\ion\ion.rangeSlider.skinHTML5.css" />
@@ -160,6 +160,13 @@
     <Content Include="css\theme-night.css" />
     <Content Include="css\theme-serenity-head-light.css" />
     <Content Include="css\theme-serenity.css" />
+    <Content Include="Customer\CheckSchedule.aspx" />
+    <Content Include="Customer\Login.aspx" />
+    <Content Include="Customer\MakeBooking.aspx" />
+    <Content Include="Customer\Register.aspx" />
+    <Content Include="Customer\SelectBus.aspx" />
+    <Content Include="Customer\SelectSeat.aspx" />
+    <Content Include="Customer\ViewProfile.aspx" />
     <Content Include="fonts\BebasNeue-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular_1.svg" />
@@ -1069,6 +1076,55 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer\CheckSchedule.aspx.cs">
+      <DependentUpon>CheckSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CheckSchedule.aspx.designer.cs">
+      <DependentUpon>CheckSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\MakeBooking.aspx.cs">
+      <DependentUpon>MakeBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\MakeBooking.aspx.designer.cs">
+      <DependentUpon>MakeBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\SelectBus.aspx.cs">
+      <DependentUpon>SelectBus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\SelectBus.aspx.designer.cs">
+      <DependentUpon>SelectBus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\SelectSeat.aspx.cs">
+      <DependentUpon>SelectSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\SelectSeat.aspx.designer.cs">
+      <DependentUpon>SelectSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ViewProfile.aspx.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ViewProfile.aspx.designer.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
