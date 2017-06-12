@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminBooking.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="App_Data\ExpressBusDB.mdf" />
     <Content Include="App_Data\ExpressBusDB_log.ldf">
@@ -985,6 +986,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminBooking.aspx.cs">
+      <DependentUpon>AdminBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminBooking.aspx.designer.cs">
+      <DependentUpon>AdminBooking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1086,6 +1101,7 @@
     <Content Include="fonts\glyphicons-halflings-regular_1.woff" />
     <Content Include="fonts\glyphicons-halflings-regular_1.woff2" />
     <Content Include="Customer\Customer.Master" />
+    <Content Include="Admin\Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
