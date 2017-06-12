@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Sedap Ekspess Sdn Bhd</title>
+        <title>Express Bus Sdn Bhd</title>
         <link rel="shortcut icon" href="favicon.ico" />
 
         <!-- Bootstrap Core CSS -->

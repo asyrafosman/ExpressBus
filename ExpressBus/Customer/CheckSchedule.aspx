@@ -10,7 +10,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <title>Sedap Ekspess Sdn Bhd</title>
+    <title>Express Bus Sdn Bhd</title>
     <link rel="shortcut icon" href="favicon.ico" />
 
     <!-- Bootstrap Core CSS -->
