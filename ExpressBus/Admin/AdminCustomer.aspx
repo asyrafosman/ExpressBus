@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="AdminCustomer.aspx.cs" Inherits="ExpressBus.Admin.AdminCustomer" %>
 
-
+<asp:Content ID="CustomerHeader" ContentPlaceHolderID="CustomerHeader" runat="server">
+    Customer
+</asp:Content>
 <asp:Content ID="Customer" ContentPlaceHolderID="Customer" runat="server">
 
     <div class="row">
@@ -45,3 +47,4 @@
          </div>
       </div>
 </asp:Content>
+

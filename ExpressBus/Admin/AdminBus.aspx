@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="AdminBus.aspx.cs" Inherits="ExpressBus.Admin.AdminBus" %>
 
+<asp:Content ID="BusHeader" ContentPlaceHolderID="BusHeader" runat="server">
+    Bus
+</asp:Content>
+
 <asp:Content ID="Bus" ContentPlaceHolderID="Bus" runat="server">
 
 <div class="row">
