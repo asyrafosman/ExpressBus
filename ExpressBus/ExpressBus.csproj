@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -990,6 +991,13 @@
     <Compile Include="Customer\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Customer\CheckSchedule.aspx.cs">
       <DependentUpon>CheckSchedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1076,7 +1084,6 @@
     <Content Include="fonts\glyphicons-halflings-regular_1.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular_1.woff" />
     <Content Include="fonts\glyphicons-halflings-regular_1.woff2" />
-    <Content Include="Customer\Customer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1085,6 +1092,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\bootstrap\" />
+    <Folder Include="Admin\build\" />
+    <Folder Include="Admin\dist\" />
+    <Folder Include="Admin\plugins\" />
     <Folder Include="js\plugins\fileinput\fileinput\" />
   </ItemGroup>
   <PropertyGroup>
