@@ -44,6 +44,10 @@
                                 <a>
                                     <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-warning" OnClick="btnLogin_Click" CausesValidation="False" /></a>
                             </li>
+                            <li>
+                                <a>
+                                    <asp:Button ID="btnContactUs" runat="server" Text="Contact Us" class="btn btn-warning"  CausesValidation="False" OnClick="btnContactUs_Click" /></a>
+                            </li>
                         </ul>
                     </asp:Panel>
                     <asp:Panel ID="pnlLogout" runat="server" Visible="False">
@@ -61,12 +65,12 @@
                 </asp:ContentPlaceHolder>
                 <hr />
                 <footer>
-                    <h4>&copy; <%: DateTime.Now.Year %> Express Bus Sdn Bhd. All rights reserved.</h4>
+                    <h4>&copy; copy; <%: DateTime.Now.Year %> Express Bus Sdn Bhd. All rights reserved.</h4>
                 </footer>
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
         </div>
     </form>
 </body>

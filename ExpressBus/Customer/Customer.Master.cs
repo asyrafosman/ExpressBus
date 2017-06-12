@@ -37,5 +37,10 @@ namespace ExpressBus.Customer
             Session.RemoveAll();
             Response.Redirect("Default.aspx");
         }
+
+        protected void btnContactUs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
