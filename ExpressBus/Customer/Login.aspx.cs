@@ -39,6 +39,7 @@ namespace ExpressBus.Customer
                 {
                     Session["fname"] = drUser["fname"].ToString();
                     Session["uname"] = drUser["uname"].ToString();
+                    Session["pw"] = drUser["pw"].ToString();
                     Session["telno"] = drUser["telno"].ToString();
                     Session["email"] = drUser["email"].ToString();
                     conn.Close();
