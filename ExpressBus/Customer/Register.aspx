@@ -1,34 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="ExpressBus.Customer.Register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="ExpressBus.Customer.Register1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-
-    <title>Sedap Ekspess Sdn Bhd</title>
+    <title>Express Bus Sdn Bhd</title>
     <link rel="shortcut icon" href="favicon.ico" />
 
     <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- //font-awesome icons -->
 
     <!-- Custom CSS -->
-    <link href="css/full-register.css" rel="stylesheet"/>
+    <link href="css/full-register.css" rel="stylesheet" />
     <style>
-        
         @import url(http://fonts.googleapis.com/css?family=Roboto:400);
+
         body {
-          background-color:#fff;
-          -webkit-font-smoothing: antialiased;
-          font: normal 14px Roboto,arial,sans-serif;
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            font: normal 14px Roboto,arial,sans-serif;
         }
-        h3 {            
+
+        h3 {
             color: red;
             animation-name: example;
             animation-duration: 3s;
@@ -38,99 +35,90 @@
 
         /* Standard syntax */
         @keyframes example {
-            from {color: #cc00cc;}
-            to {color: #00e64d;}
+            from {
+                color: #cc00cc;
+            }
+
+            to {
+                color: #00e64d;
+            }
         }
-
     </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-
 <body>
-
-    <div class="container col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+    <form id="form1" runat="server">
+        <div class="container col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
             <br />
             <br />
             <h3 style="text-align: center; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Always There For You.</h3>
             <br />
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 style="text-align: center">Fill In Your Details</h4>
+                    <label style="text-align: center">Fill In Your Details</label>
                 </div>
-                <form action="InsertCustomerServlet" method="post">
-                    <div class="panel-body">
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-address-card" style="width: auto"></i>
-                                </span>
-                                <input type="text" name="fullname" required class="form-control"/>
-                            </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-id-card" aria-hidden="true"></i>
+                            </span>
+                            <asp:TextBox ID="txtFullName" runat="server" class="form-control"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                        <label>Username</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-user-circle-o" style="width: auto"></i>
-                                </span>
-                                <input type="text" name="username" required class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        <label>Password</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-key" style="width: auto"></i>
-                                </span>
-                                <input type="password" name="password" required class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        <label>Contact Number</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-mobile" style="width: auto"></i>
-                                </span>
-                                <input type="text" name="contactno" required class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        <label>Email</label>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-envelope-o" style="width: auto"></i>
-                                </span>
-                                <input type="email" name="email" required class="form-control"/>
-                            </div>
-                        </div>
-                        <button id="btnLogin" runat="server" class="btn btn-default" style="width: 100%">
-                            SUBMIT
-                        </button>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFullName" ErrorMessage="Please enter your full name" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
-                </form>
+                <div class="form-group">
+                    <label>Username</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                        <asp:TextBox ID="txtUserName" runat="server" class="form-control"></asp:TextBox>
+                    </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="Please enter your username" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                        </span>
+                        <asp:TextBox ID="txtPassword" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
+                <div class="form-group">
+                    <label>Contact Number</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </span>
+                        <asp:TextBox ID="txtContactNo" runat="server" class="form-control"></asp:TextBox>
+                    </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtContactNo" ErrorMessage="Please enter your contact number" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </span>
+                        <asp:TextBox ID="txtEmail" runat="server" class="form-control" TextMode="Email"></asp:TextBox>
+                    </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtEmail" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Invalid email</asp:RegularExpressionValidator>
+                </div>
+                <asp:Button ID="btnRegister" runat="server" Text="REGISTER" class="btn btn-default" Width="100%" OnClick="btnRegister_Click" />
             </div>
-            <br /><br />
-            <footer>
-                <p style="text-align: center; color: white">&copy;</p>
-            </footer>
-            
+            <p style="text-align: center; color: white"><a href="Login.aspx">Already have account? Click here.</a></p>
+        </div>
         </div>
 
-    
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
+        <!-- jQuery -->
+        <script src="../js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../js/bootstrap.min.js"></script>
+    </form>
 </body>
-
 </html>

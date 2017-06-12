@@ -7,12 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="jumbotron">
-        <h1>Welcome to Sedap Ekspress</h1>
+        <h1>Welcome to Express Bus</h1>
         <p class="lead">Malaysia's largest bus services group and the leading bus service group in South East Asia.</p>
-        <p><a href="CreateAccount.aspx" class="btn btn-primary btn-lg">Register &raquo;</a></p>
+        <p><a href="Register.aspx" class="btn btn-primary btn-lg">Register &raquo;</a></p>
     </div>
 </asp:Content>

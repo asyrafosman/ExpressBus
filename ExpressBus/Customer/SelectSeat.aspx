@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sedap Ekspess Sdn Bhd</title>
+    <title>Express Bus Sdn Bhd</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="shortcut icon" href="favicon.ico" />
 
