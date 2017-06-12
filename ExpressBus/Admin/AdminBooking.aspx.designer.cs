@@ -10,6 +10,6 @@
 namespace ExpressBus.Admin {
     
     
-    public partial class AdminMaster {
+    public partial class AdminBooking {
     }
 }
