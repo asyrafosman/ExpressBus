@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ExpressBus.Admin
 {
-    public partial class AdminMaster : System.Web.UI.MasterPage
+    public partial class Admin : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
