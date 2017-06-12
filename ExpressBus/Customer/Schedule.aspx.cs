@@ -19,10 +19,12 @@ namespace ExpressBus.Customer
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["origin"] = DropDownList1.SelectedValue.ToString();
-            Session["destination"] = DropDownList2.SelectedValue.ToString();
+            Session["Origin"] = DropDownList1.SelectedValue.ToString();
+            Session["Destination"] = DropDownList2.SelectedValue.ToString();
             
             Response.Redirect("~/Customer/SelectBus.aspx");
         }
+
+        
     }
 }
