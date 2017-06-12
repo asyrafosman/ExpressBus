@@ -8,9 +8,8 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Customer's Booking</h3>
                 </div>
-
+                <!-- Table for customer-->
                 <div class="panel-body panel-body-table">
-
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-actions">
                             <thead>
@@ -41,30 +40,12 @@
                                     <td><span class="label label-warning">IN PROCESS</span></td>
                                     <td></td>
                                     <td></td>
-
-                                    <!--Modal-->
-                                    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    Confirmation
-                                                </div>
-                                                <div class="modal-body">
-                                                    Are you sure to continue?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                    <a class="btn btn-primary btn-ok">Continue</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                </div>
+                </div><!-- end Table for customer-->
             </div>
 
         </div>

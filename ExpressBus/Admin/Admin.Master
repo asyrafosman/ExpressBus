@@ -227,6 +227,12 @@
 
                             <asp:ContentPlaceHolder ID="Booking" runat="server">
                             </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="Customer" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="Bus" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="Station" runat="server">
+                            </asp:ContentPlaceHolder>
                     </div>
                     <!-- /.content-wrapper -->
 
@@ -263,6 +269,8 @@
                 <script src="dist/js/pages/dashboard2.js"></script>
                 <!-- AdminLTE for demo purposes -->
                 <script src="dist/js/demo.js"></script>
+                <!-- Datatables -->
+                <script src="plugins/datatables/jquery.dataTables.min.js"></script>
         </div>
     </form>
 </body>
