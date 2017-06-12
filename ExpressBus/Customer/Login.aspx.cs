@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace ExpressBus.Customer
 {
-    public partial class Login1 : System.Web.UI.Page
+    public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,13 +22,11 @@ namespace ExpressBus.Customer
             string connStr = ConfigurationManager.ConnectionStrings["ExpressBusCS"].ConnectionString;
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
-            string login = "SELECT * FROM Customer " +
-                        " WHERE uname = @uname AND pw = @pw";
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = login;
-            cmd.Parameters.Add(new SqlParameter("uname", txtUser.Text));
-            cmd.Parameters.Add(new SqlParameter("pw", txtPassword.Text));
-            cmd.Connection = conn;
+            
+            SqlCommand cmd = new SqlCommand("CustLogin", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("uname", txtUser.Text);
+            cmd.Parameters.AddWithValue("pw", txtPassword.Text);
 
             SqlDataReader drUser;
             drUser = cmd.ExecuteReader();
@@ -39,6 +38,7 @@ namespace ExpressBus.Customer
                 {
                     Session["fname"] = drUser["fname"].ToString();
                     Session["uname"] = drUser["uname"].ToString();
+                    Session["pw"] = drUser["pw"].ToString();
                     Session["telno"] = drUser["telno"].ToString();
                     Session["email"] = drUser["email"].ToString();
                     conn.Close();

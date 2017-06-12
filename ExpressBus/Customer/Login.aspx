@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ExpressBus.Customer.Login1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ExpressBus.Customer.Login" %>
 
 <!DOCTYPE html>
 
@@ -95,7 +95,6 @@
                     </div>
                     <asp:Button ID="btnLogin" runat="server" Text="LOGIN" Width="100%" CssClass="btn btn-default" OnClick="btnLogin_Click" />
                 </div>
-
                 <p style="text-align: center; color: white"><a href="Register.aspx">New in here? Click here.</a></p>
             </div>
             <br />

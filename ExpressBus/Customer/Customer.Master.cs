@@ -11,7 +11,7 @@ namespace ExpressBus.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["AccNum"] == null)
+            if (Session["uname"] == null)
             {
                 pnlLogin.Visible = true;
                 pnlLogout.Visible = false;
