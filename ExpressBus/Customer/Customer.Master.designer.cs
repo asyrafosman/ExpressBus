@@ -58,6 +58,15 @@ namespace ExpressBus.Customer {
         protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
+        /// btnContactUs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnContactUs;
+        
+        /// <summary>
         /// pnlLogout control.
         /// </summary>
         /// <remarks>
