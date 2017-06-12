@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.Master" AutoEventWireup="true" CodeBehind="ViewProfile.aspx.cs" Inherits="ExpressBus.Customer.ViewProfile1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.Master" AutoEventWireup="true" CodeBehind="ViewProfile.aspx.cs" Inherits="ExpressBus.Customer.ViewProfile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />

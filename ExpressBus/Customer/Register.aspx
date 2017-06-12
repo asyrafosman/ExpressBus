@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="ExpressBus.Customer.Register1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="ExpressBus.Customer.Register" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Express Bus Sdn Bhd</title>
+    <title>Express Bus</title>
     <link rel="shortcut icon" href="favicon.ico" />
 
     <!-- Bootstrap Core CSS -->

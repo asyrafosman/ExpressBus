@@ -10,7 +10,7 @@
 namespace ExpressBus.Customer {
     
     
-    public partial class Register1 {
+    public partial class Register {
         
         /// <summary>
         /// form1 control.

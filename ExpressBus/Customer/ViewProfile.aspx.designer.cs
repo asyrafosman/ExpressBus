@@ -10,7 +10,7 @@
 namespace ExpressBus.Customer {
     
     
-    public partial class ViewProfile1 {
+    public partial class ViewProfile {
         
         /// <summary>
         /// txtFullName control.

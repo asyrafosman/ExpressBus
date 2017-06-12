@@ -1,23 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ExpressBus.Customer
 {
-    public partial class ViewProfile1 : System.Web.UI.Page
+    public partial class ViewProfile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtFullName.Text = Session["fname"].ToString();
-            txtUserName.Text = Session["uname"].ToString();
-            txtPassword.Text = Session["pw"].ToString();
-            txtContactNo.Text = Session["telno"].ToString();
-            txtEmail.Text = Session["email"].ToString();
+            if (Session["fname"]==null)
+            {
+                Response.Redirect("Default.aspx");
+            }
+
+            else
+            {
+                txtFullName.Text = Session["fname"].ToString();
+                txtUserName.Text = Session["uname"].ToString();
+                txtPassword.Text = Session["pw"].ToString();
+                txtContactNo.Text = Session["telno"].ToString();
+                txtEmail.Text = Session["email"].ToString();
+            }
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -29,16 +34,13 @@ namespace ExpressBus.Customer
                 conn.Open();
                 try
                 {
-                    string update = "UPDATE Customer " +
-                            " SET fname = @fname, pw = @pw, telno = @telno, email = @email" +
-                            " WHERE uname = @uname ";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = update;
-                    cmd.Parameters.Add(new SqlParameter("uname", txtUserName.Text));
-                    cmd.Parameters.Add(new SqlParameter("fname", txtFullName.Text));          
-                    cmd.Parameters.Add(new SqlParameter("pw", txtPassword.Text));
-                    cmd.Parameters.Add(new SqlParameter("telno", txtContactNo.Text));
-                    cmd.Parameters.Add(new SqlParameter("email", txtEmail.Text));
+                    SqlCommand cmd = new SqlCommand("CustUpdate", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("uname", txtUserName.Text);
+                    cmd.Parameters.AddWithValue("fname", txtFullName.Text);
+                    cmd.Parameters.AddWithValue("pw", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("telno", txtContactNo.Text);
+                    cmd.Parameters.AddWithValue("email", txtEmail.Text);
                     cmd.Connection = conn;
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
