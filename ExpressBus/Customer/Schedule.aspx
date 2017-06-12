@@ -26,12 +26,13 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-arrow-circle-up" style="width: auto"></i>
                                 </span>
-                                <select class="form-control" name="origin">
-                                    <option value="" disabled selected>-- Select Your Origin --</option>
-                                    <c:forEach items="${sessionScope.stations}" var="currentdestination" varStatus="loop">
-                                        <option><c:out value="${currentdestination.name}" /></option>
-                                    </c:forEach>
-                                </select>
+                                <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Station] WHERE ([status] = @status)">
+                                    <SelectParameters>
+                                        <asp:Parameter DefaultValue="1" Name="status" Type="Int32" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                
                             </div>
                         </div>
                         <div class="form-group">
@@ -40,12 +41,8 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-arrow-circle-down" style="width: auto"></i>
                                 </span>
-                                <select class="form-control" name="destination">
-                                    <option value="" disabled selected>-- Select Your Destination --</option>
-                                    <c:forEach items="${sessionScope.stations}" var="currentdestination" varStatus="loop">
-                                        <option><c:out value="${currentdestination.name}" /></option>
-                                    </c:forEach>
-                                </select>
+                                 <asp:DropDownList ID="DropDownList2" runat="server" class="form-control" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
+                                
                             </div>
                         </div>
                         <div class="form-group">
@@ -54,8 +51,10 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-calendar-check-o" style="width: auto"></i>
                                 </span>
+                                
                                 <input type="date" name="date" required class="form-control"/>
                             </div>
+                            
                         </div>
                         <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="SEARCH" OnClick="Button1_Click" />
                         
