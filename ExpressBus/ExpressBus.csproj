@@ -1084,6 +1084,7 @@
     <Content Include="fonts\glyphicons-halflings-regular_1.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular_1.woff" />
     <Content Include="fonts\glyphicons-halflings-regular_1.woff2" />
+    <Content Include="Customer\Customer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
