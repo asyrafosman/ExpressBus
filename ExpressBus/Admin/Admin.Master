@@ -108,6 +108,8 @@
                                 </asp:ContentPlaceHolder>
                                 <asp:ContentPlaceHolder ID="SeatHeader" runat="server">
                                 </asp:ContentPlaceHolder>
+                                <asp:ContentPlaceHolder ID="HomeHeader" runat="server">
+                                </asp:ContentPlaceHolder>
                             </h1>
                         </section>
 
@@ -183,6 +185,8 @@
                             <asp:ContentPlaceHolder ID="Station" runat="server">
                             </asp:ContentPlaceHolder>
                             <asp:ContentPlaceHolder ID="Seat" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="Home" runat="server">
                             </asp:ContentPlaceHolder>
                     </div>
                     <!-- /.content-wrapper -->

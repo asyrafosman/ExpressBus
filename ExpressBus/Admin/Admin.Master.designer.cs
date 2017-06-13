@@ -76,6 +76,15 @@ namespace ExpressBus.Admin {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder SeatHeader;
         
         /// <summary>
+        /// HomeHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder HomeHeader;
+        
+        /// <summary>
         /// Booking control.
         /// </summary>
         /// <remarks>
@@ -119,5 +128,14 @@ namespace ExpressBus.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Seat;
+        
+        /// <summary>
+        /// Home control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder Home;
     }
 }
