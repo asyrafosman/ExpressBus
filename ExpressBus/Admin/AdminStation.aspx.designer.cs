@@ -9,7 +9,7 @@
 
 
 
-public partial class  AdminStation {
+public partial class  {
     
     /// <summary>
     /// GridView1 control.
