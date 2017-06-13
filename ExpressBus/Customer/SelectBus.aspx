@@ -13,7 +13,7 @@
     <!-- //font-awesome icons -->
     
     <style type="text/css">
-        body {
+        /*body {
             background: #202020;
             font: bold 12px Arial, Helvetica, sans-serif;
             margin: 0;
@@ -58,7 +58,7 @@
             src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/BebasNeue-webfont.woff') format('woff'), url('../fonts/BebasNeue-webfont.ttf') format('truetype'), url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
             font-weight: normal;
             font-style: normal;
-        }
+        }*/
 
         .container {
             width: 960px;
@@ -81,7 +81,7 @@
             text-shadow: 0 0 5px #00c6ff;
         }
 
-        ul {
+        ul1 {
             width: 735px;
             margin: 0 auto;
             padding: 0px;
@@ -89,7 +89,7 @@
             text-align: center;
         }
 
-            ul li {
+            ul1 li {
                 display: inline;
                 font-size: 10em;
                 text-align: center;
@@ -185,17 +185,17 @@
         <div class="clock">
             <div id="Date"></div>
 
-            <ul>
+            <ul1>
                 <li id="hours"></li>
                 <li id="point">:</li>
                 <li id="min"></li>
                 <li id="point">:</li>
                 <li id="sec"></li>
-            </ul>
+            </ul1>
         </div>
     </div>
 
-    <h3 style="text-align: center; font-family: 'BebasNeueRegular'">Available Trip for You</h3>
+    <h3 style="text-align: center; color: #fff; font-family: 'BebasNeueRegular'">Available Trip for You</h3>
 
     <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="BusId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
