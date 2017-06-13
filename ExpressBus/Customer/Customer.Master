@@ -48,7 +48,7 @@
                             <li>
                                <%-- <a>
                                     <asp:Button ID="btnContactUs" runat="server" Text="Contact Us" class="btn btn-warning"  CausesValidation="False" OnClick="btnContactUs_Click" /></a>--%>
-                                    <asp:LinkButton ID="lbtnContactUs" runat="server" Text="Contact Us" OnClick="btnContactUs_Click" CausesValidation="False">Contact Us</asp:LinkButton>
+                                    <asp:LinkButton ID="lbtnContactUs" runat="server" Text="Contact Us" OnClick="btnContactUs_Click" CausesValidation="False">About Us</asp:LinkButton>
                             </li>
                         </ul>
                     </asp:Panel>
