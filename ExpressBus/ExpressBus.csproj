@@ -65,6 +65,7 @@
     <Content Include="Admin\AdminBus.aspx" />
     <Content Include="Admin\AdminBusStation.aspx" />
     <Content Include="Admin\AdminCustomer.aspx" />
+    <Content Include="Admin\AdminSeat.aspx" />
     <Content Include="App_Data\ExpressBusDB.mdf" />
     <Content Include="App_Data\ExpressBusDB_log.ldf">
       <DependentUpon>ExpressBusDB.mdf</DependentUpon>
@@ -114,6 +115,7 @@
     <Content Include="img\blueimp\video-play.svg" />
     <Content Include="img\boiler.jpg" />
     <Content Include="img\booked_seat_img.gif" />
+    <Content Include="img\BUS SEAT.png" />
     <Content Include="img\bus-login.jpg" />
     <Content Include="img\bus.jpg" />
     <Content Include="img\bus.png" />
@@ -719,6 +721,13 @@
     </Compile>
     <Compile Include="Admin\AdminCustomer.aspx.designer.cs">
       <DependentUpon>AdminCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSeat.aspx.cs">
+      <DependentUpon>AdminSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSeat.aspx.designer.cs">
+      <DependentUpon>AdminSeat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Booking.aspx.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
