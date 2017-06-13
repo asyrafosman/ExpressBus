@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="ExpressBus.Customer.Register" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -67,51 +69,53 @@
                         </div>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFullName" ErrorMessage="Please enter your full name" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
-                <div class="form-group">
-                    <label>Username</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                        </span>
-                        <asp:TextBox ID="txtUserName" runat="server" class="form-control"></asp:TextBox>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                            <asp:TextBox ID="txtUserName" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="Please enter your username" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtUserName" ErrorMessage="Please enter your username" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-key" aria-hidden="true"></i>
-                        </span>
-                        <asp:TextBox ID="txtPassword" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-key" aria-hidden="true"></i>
+                            </span>
+                            <asp:TextBox ID="txtPassword" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
+                        </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:ScriptManager runat="server"></asp:ScriptManager>
+                        <ajaxToolkit:PasswordStrength ID="txtPassword_PasswordStrength" runat="server" TargetControlID="txtPassword" DisplayPosition="BelowLeft" />
                     </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-                </div>
-                <div class="form-group">
-                    <label>Contact Number</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                        <asp:TextBox ID="txtContactNo" runat="server" class="form-control"></asp:TextBox>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
+                            <asp:TextBox ID="txtContactNo" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtContactNo" ErrorMessage="Please enter your contact number" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtContactNo" ErrorMessage="Please enter your contact number" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        </span>
-                        <asp:TextBox ID="txtEmail" runat="server" class="form-control" TextMode="Email"></asp:TextBox>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                            <asp:TextBox ID="txtEmail" runat="server" class="form-control" TextMode="Email"></asp:TextBox>
+                        </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtEmail" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Invalid email</asp:RegularExpressionValidator>
                     </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter your email" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtEmail" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Invalid email</asp:RegularExpressionValidator>
+                    <asp:Button ID="btnRegister" runat="server" Text="REGISTER" class="btn btn-default" Width="100%" OnClick="btnRegister_Click" />
                 </div>
-                <asp:Button ID="btnRegister" runat="server" Text="REGISTER" class="btn btn-default" Width="100%" OnClick="btnRegister_Click" />
+                <p style="text-align: center; color: white"><a href="Login.aspx">Already have account? Click here.</a></p>
             </div>
-            <p style="text-align: center; color: white"><a href="Login.aspx">Already have account? Click here.</a></p>
-        </div>
         </div>
 
         <!-- jQuery -->

@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -67,7 +71,6 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Customer\Booking.aspx" />
-    <Content Include="Customer\CheckSchedule.aspx" />
     <Content Include="Customer\Default.aspx" />
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\MakeBooking.aspx" />
@@ -1013,13 +1016,6 @@
     </Compile>
     <Compile Include="Customer\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\CheckSchedule.aspx.cs">
-      <DependentUpon>CheckSchedule.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\CheckSchedule.aspx.designer.cs">
-      <DependentUpon>CheckSchedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Customer.Master.cs">
       <DependentUpon>Customer.Master</DependentUpon>
