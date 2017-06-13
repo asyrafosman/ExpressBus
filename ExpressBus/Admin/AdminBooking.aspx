@@ -26,7 +26,7 @@
                                     <ItemTemplate>
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("id") %>'
                                             OnClick="DeleteBooking">
-                                        <span class="fa fa-search fa-lg"></span></asp:LinkButton>
+                                        <span class="fa fa-times"></span></asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                

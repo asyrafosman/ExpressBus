@@ -22,6 +22,13 @@
                                 <asp:BoundField DataField="telno" HeaderText="Telephone No" SortExpression="telno" />
                                 <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" />
                                 <asp:BoundField DataField="role" HeaderText="Role" SortExpression="role" />
+                                <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("custid") %>'
+                                            OnClick="DeleteCustomer">
+                                        <span class="fa fa-times"></span></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>

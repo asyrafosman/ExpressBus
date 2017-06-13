@@ -35,21 +35,6 @@ namespace ExpressBus.Admin
             cmd.ExecuteNonQuery();
             
 
-            try
-            {
-                
-            }
-            catch (Exception ex)
-            {
-                
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-
-
             Response.Redirect("AdminBooking.aspx");
         }
     }
