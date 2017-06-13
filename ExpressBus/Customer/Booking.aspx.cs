@@ -74,5 +74,42 @@ namespace ExpressBus.Customer
                 Label11.Text = Session["busNo"].ToString();
             }
         }
+
+        protected void btnPay_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["ExpressBusCS"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("BookingInsert", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("busNo", Session["busNo"].ToString());
+                cmd.Parameters.AddWithValue("bdate", Session["Date"].ToString());
+                cmd.Parameters.AddWithValue("seatNo", Session["seatId"].ToString());
+                cmd.Parameters.AddWithValue("custName", Session["fname"].ToString());
+                cmd.Connection = conn;
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+
+                SqlCommand command = new SqlCommand("BusSeatUpdate", conn);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("seat", Session["seatId"].ToString()));
+                command.Parameters.Add(new SqlParameter("sstatus", 1));
+                command.Connection = conn;
+                command.ExecuteNonQuery();
+                command.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+                string script = "alert('" + ex.Message.ToString() + "'); window.location.reload();\n";
+                Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", script, true);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        Response.Redirect("Ticket.aspx");
+        }
     }
 }

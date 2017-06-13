@@ -11,7 +11,24 @@ namespace ExpressBus.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["uname"] == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
+            else
+            {
+                lblName.Text = Session["uname"].ToString();
+                lblNama.Text = Session["uname"].ToString();
+                lblBus.Text = Session["busNo"].ToString();
+                lblBusNo.Text = Session["busNo"].ToString();
+                lblPrice.Text = Session["price"].ToString();
+                lblContact.Text = Session["telno"].ToString();
+                lblOrigin.Text = Session["origin"].ToString();
+                lblDestination.Text = Session["destination"].ToString();
+                lblDate.Text = Session["Date"].ToString();
+                lblSeat.Text = Session["seatId"].ToString();
+                lblTime.Text = Session["depart"].ToString();
+            }
         }
     }
 }

@@ -125,7 +125,7 @@
         <legend>
             <div style="color: white">Credit card payment</div>
         </legend>
-        <p style='text-align: center'>We accept:</p>
+        <div style="color: white"><p style='text-align: center'>We accept:</p></div>
         <label>
             <img src='../img/cards/visae.png' /></label>
         <label>
@@ -139,11 +139,11 @@
         <label>
             <img src='../img/cards/paypal.png' /></label>
         <input name="alasan" style="text-align: center;" type="text" class="form-control" required />
-        <small>Your information is secure.</small>
+        <div style="color: white"><small>Your information is secure.</small></div>
         <br />
         <br />
         <button type="button" class="btn btn-default" onclick="hideInput()">Back</button>
-        <button type="submit" class="btn btn-success">Pay</button>
+        <asp:Button ID="btnPay" runat="server" Text="Pay" class="btn btn-success" OnClick="btnPay_Click"/>
     </div>
 
     <div class="form-group text-center" id="demo2">
