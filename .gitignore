@@ -257,3 +257,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/ExpressBus/Admin/AdminBooking.aspx.designer.cs~HEAD
+/ExpressBus/Admin/AdminBooking.aspx.designer.cs~2fc801c0c91407a1c3950d246756b212f4667236

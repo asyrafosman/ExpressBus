@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.Master" AutoEventWireup="true" CodeBehind="SelectBus.aspx.cs" Inherits="ExpressBus.Customer.SelectBus" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Express Bus Sdn Bhd</title>
@@ -9,7 +8,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- //font-awesome icons -->
+    
     <style type="text/css">
         body {
             background: #202020;
@@ -120,7 +122,6 @@
             }
         }
 
-
         @-moz-keyframes mymove {
             0% {
                 opacity: 1.0;
@@ -149,7 +150,7 @@
             var newDate = new Date();
             // Extract the current date from Date object
             newDate.setDate(newDate.getDate());
-            // Output the day, date, month and year    
+            // Output the day, date, month and year
             $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
 
             setInterval(function () {
@@ -180,8 +181,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-
     <div class="container">
         <div class="clock">
             <div id="Date"></div>
@@ -193,59 +192,56 @@
                 <li id="point">:</li>
                 <li id="sec"></li>
             </ul>
-
         </div>
     </div>
 
     <h3 style="text-align: center; font-family: 'BebasNeueRegular'">Available Trip for You</h3>
 
+    <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="BusId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
+        <Columns>
+            <asp:BoundField DataField="BusNo" HeaderText="Bus Number" SortExpression="BusNo" />
+            <asp:BoundField DataField="Depart" HeaderText="Depart Time" SortExpression="Depart" />
+            <asp:BoundField DataField="Arrive" HeaderText="Arrival Time" SortExpression="Arrive" />
+            <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
+            <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
+            <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
+            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            <asp:BoundField DataField="NoSeat" HeaderText="Total Seat" SortExpression="NoSeat" />
+            <asp:TemplateField HeaderText="">
+                <HeaderStyle Width="3%" />
+                <ItemStyle Width="3%" />
+                <ItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("BusId") %>'
+                        OnClick="ViewSeat">
+                        <span class="fa fa-search fa-lg"></span></asp:LinkButton>
+                </ItemTemplate>
+                <HeaderStyle HorizontalAlign="Center" />
+                <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="5%" />
+            </asp:TemplateField>
+        </Columns>
+        <EditRowStyle BackColor="#7C6F57" />
+        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#E3EAEB" />
+        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F8FAFA" />
+        <SortedAscendingHeaderStyle BackColor="#246B61" />
+        <SortedDescendingCellStyle BackColor="#D4DFE1" />
+        <SortedDescendingHeaderStyle BackColor="#15524A" />
+    </asp:GridView>
 
-    
-        
-            <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="BusId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="BusNo" HeaderText="Bus Number" SortExpression="BusNo" />
-                    <asp:BoundField DataField="Depart" HeaderText="Depart Time" SortExpression="Depart" />
-                    <asp:BoundField DataField="Arrive" HeaderText="Arrival Time" SortExpression="Arrive" />
-                    <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
-                    <asp:BoundField DataField="Destination" HeaderText="Destination" SortExpression="Destination" />
-                    <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
-                    <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-                    <asp:BoundField DataField="NoSeat" HeaderText="Total Seat" SortExpression="NoSeat" />
-                    <asp:CommandField ShowSelectButton="True" />
-                </Columns>
-                <EditRowStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                <SortedAscendingHeaderStyle BackColor="#246B61" />
-                <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                <SortedDescendingHeaderStyle BackColor="#15524A" />
-            </asp:GridView>
-
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Bus] WHERE (([Origin] LIKE '%' + @Origin + '%') AND ([Destination] LIKE '%' + @Destination + '%'))">
-                <SelectParameters>
-                    <asp:SessionParameter Name="Origin" SessionField="Origin" Type="String" />
-                    <asp:SessionParameter Name="Destination" SessionField="Destination" Type="String" />
-                </SelectParameters>
-            </asp:SqlDataSource>
-
-            
-        
-    
-
-
-    
-
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Bus] WHERE (([Origin] LIKE '%' + @Origin + '%') AND ([Destination] LIKE '%' + @Destination + '%'))">
+        <SelectParameters>
+            <asp:SessionParameter Name="Origin" SessionField="Origin" Type="String" />
+            <asp:SessionParameter Name="Destination" SessionField="Destination" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-
 </asp:Content>

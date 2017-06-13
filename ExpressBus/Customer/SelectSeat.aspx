@@ -8,7 +8,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- //font-awesome icons -->
+    
 
     <style type="text/css">
         body {
@@ -114,7 +117,6 @@
             }
         }
 
-
         @-moz-keyframes mymove {
             0% {
                 opacity: 1.0;
@@ -131,77 +133,55 @@
                 text-shadow: 0 0 20px #00c6ff;
             }
         }
+        .auto-style1 {
+            background-clip: padding-box;
+            background-color: #99d6ff;
+            color: black;
+            border: 5px solid #0066ff;
+            border-radius: 15px;
+            height: 19px;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-
     <h3 style="text-align: center; font-family: 'BebasNeueRegular'">Select Your seat</h3>
     <br />
 
     <div align="center">
-
-        <table>
-            <tr>
-                <td class="seat" rowspan="2">
-                    <img src="../img/selected_seat_img.gif" />Driver</td>
-                <c:foreach items="${sessionScope.seatSession}" begin="0" end="12" var="seats" varstatus="loop">
-                                <c:if test="${seats.status == 0}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>
-                                    <c:if test="${seats.status == 1}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" disabled /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>   
-                                </c:foreach>
-            </tr>
-            <tr>
-                <c:foreach items="${sessionScope.seatSession}" begin="13" end="25" var="seats" varstatus="loop">
-                            <c:if test="${seats.status == 0}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>
-                                    <c:if test="${seats.status == 1}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" disabled /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>   
-                                </c:foreach>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>AISLE</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>AISLE</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <c:foreach items="${sessionScope.seatSession}" begin="26" end="26" var="seats" varstatus="loop">
-                            <c:if test="${seats.status == 0}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>
-                                    <c:if test="${seats.status == 1}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" disabled /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>   
-                                </c:foreach>
-            </tr>
-
-            <tr>
-                <td style="text-align: center; vertical-align: bottom">DOOR</td>
-                <c:foreach items="${sessionScope.seatSession}" begin="27" end="40" var="seats" varstatus="loop">
-                            <c:if test="${seats.status == 0}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>
-                                    <c:if test="${seats.status == 1}">
-                                <td class="seat"><input type="checkbox" name="seat" value="<c:out value="${seats.seat}" />" id="c" disabled /><label for="c"><img src="img/available_seat_img.gif"/><c:out value="${seats.seat}" /></label></td>
-                                    </c:if>   
-                                </c:foreach>
-            </tr>
-        </table>
+        <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="seat" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="50%">
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:BoundField DataField="seat" HeaderText="Seat Number" InsertVisible="False" ReadOnly="True" SortExpression="seat" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle" />
+                <%--<asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />--%>
+                <asp:TemplateField HeaderText="Status" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                    <ItemTemplate>
+                     <asp:Label ID="Status" runat="server" Text='<%# Eval("status").ToString() == "0" ? "Available" : "Booked" %>'></asp:Label>
+                        
+                    </ItemTemplate>
+                    </asp:TemplateField>
+                <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("seat") %>'
+                        OnClick="BookSeat">
+                        <span class="fa fa-search fa-lg"></span></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+            <EditRowStyle BackColor="#7C6F57" />
+            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#E3EAEB" />
+            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+            <SortedAscendingHeaderStyle BackColor="#246B61" />
+            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+            <SortedDescendingHeaderStyle BackColor="#15524A" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [BusSeat]"></asp:SqlDataSource>
+        
 
         <br />
         <img src="../img/available_seat_img.gif" style="background-clip: padding-box; background-color: #99d6ff; border-radius: 10px;" />Available Seat
@@ -213,10 +193,7 @@
                 <br />
         <br />
 
-        <input type="reset" class="btn btn-default" value="Reset" />
-        <asp:Button ID="Button1" class="btn btn-success" runat="server" Text="Proceed" OnClick="Button1_Click" />
-
-
+       
     </div>
 
     <hr>
@@ -230,14 +207,9 @@
         <!-- /.row -->
     </footer>
 
-
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-
-
-
-
 </asp:Content>

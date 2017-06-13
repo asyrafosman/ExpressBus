@@ -7,7 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+namespace ExpressBus.Admin
+{
+    public partial class AdminStation {
 
+    }
 
-public partial class  {
 }
+
+

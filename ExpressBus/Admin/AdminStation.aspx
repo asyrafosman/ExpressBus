@@ -16,7 +16,7 @@
 
                 <div class="panel-body panel-body-table">
 
-                    <div class="table-responsive">
+                    <%--<div class="table-responsive">
                         <table class="table table-bordered table-striped table-actions">
                             <thead>
                                 <tr>
@@ -39,7 +39,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>                                
+                    </div>                  --%>              
 
                 </div>
             </div>                                                

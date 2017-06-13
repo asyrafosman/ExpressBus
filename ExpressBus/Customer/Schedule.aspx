@@ -62,7 +62,7 @@
                 </div>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter your date" ControlToValidate="txtDate" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
-            <asp:Button ID="btnSubmit" runat="server" class="btn btn-success" Text="SEARCH" OnClick="BtnSubmit_Click" />
+            <asp:Button ID="BtnSubmit" runat="server" CssClass="btn btn-default" Text="SEARCH" OnClick="BtnSubmit_Click" />
         </div>
     </div>
     <br />
