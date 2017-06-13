@@ -17,10 +17,11 @@
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                             <Columns>
                                 <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                                <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+                                <asp:BoundField DataField="bstatus" HeaderText="Status" SortExpression="status" />
                                 <asp:BoundField DataField="busNo" HeaderText="Bus No" SortExpression="busNo" />
-                                <asp:BoundField DataField="date" HeaderText="Date" SortExpression="date" />
+                                <asp:BoundField DataField="bdate" HeaderText="Date" SortExpression="date" />
                                 <asp:BoundField DataField="seatNo" HeaderText="Seat No" SortExpression="seatNo" />
+                                <asp:BoundField DataField="custName" HeaderText="Customer Name" SortExpression="custName" />
                                 <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("id") %>'

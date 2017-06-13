@@ -85,7 +85,7 @@
                             <ul class="sidebar-menu">
                                 <li class="header">MAIN NAVIGATION</li>
                                 <li><a href="AdminBooking.aspx"><i class="fa fa-circle-o text-red"></i><span>Booking</span></a></li>
-                                <li><a href="AdminStation.aspx"><i class="fa fa-circle-o text-yellow"></i><span>Station</span></a></li>
+                                <li><a href="AdminBusStation.aspx"><i class="fa fa-circle-o text-yellow"></i><span>Station</span></a></li>
                                 <li><a href="AdminCustomer.aspx"><i class="fa fa-circle-o text-aqua"></i><span>Customer</span></a></li>
                                 <li><a href="AdminBus.aspx"><i class="fa fa-circle-o text-purple"></i><span>Bus</span></a></li>
                             </ul>
@@ -107,6 +107,8 @@
                                 <asp:ContentPlaceHolder ID="StationHeader" runat="server">
                                 </asp:ContentPlaceHolder>
                                 <asp:ContentPlaceHolder ID="SeatHeader" runat="server">
+                                </asp:ContentPlaceHolder>
+                                <asp:ContentPlaceHolder ID="HomeHeader" runat="server">
                                 </asp:ContentPlaceHolder>
                             </h1>
                         </section>
@@ -183,6 +185,8 @@
                             <asp:ContentPlaceHolder ID="Station" runat="server">
                             </asp:ContentPlaceHolder>
                             <asp:ContentPlaceHolder ID="Seat" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <asp:ContentPlaceHolder ID="Home" runat="server">
                             </asp:ContentPlaceHolder>
                     </div>
                     <!-- /.content-wrapper -->
