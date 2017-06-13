@@ -12,34 +12,19 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <table class="table datatable">
-                            <thead>
-                                <tr>
-                                    <th width="50">No</th>
-                                    <th>Customer ID</th>
-                                    <th>Full Name</th>
-                                    <th>Username</th>
-                                    <th>Password</th>
-                                    <th>Contact No</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center"></td>
-                                    <td class="text-center">27890</td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"></td>
-                                    <td class="text-center"><span class="label label-default">Customer</span></td>
-                                    <td class="text-center"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="custid" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
+                            <Columns>
+                                <asp:BoundField DataField="custid" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="custid" />
+                                <asp:BoundField DataField="fname" HeaderText="Full Name" SortExpression="fname" />
+                                <asp:BoundField DataField="uname" HeaderText="Username" SortExpression="uname" />
+                                <asp:BoundField DataField="pw" HeaderText="Password" SortExpression="pw" />
+                                <asp:BoundField DataField="telno" HeaderText="Telephone No" SortExpression="telno" />
+                                <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" />
+                                <asp:BoundField DataField="role" HeaderText="Role" SortExpression="role" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>
                     </div>
                 </div>
             </div><!-- END DEFAULT DATATABLE -->
