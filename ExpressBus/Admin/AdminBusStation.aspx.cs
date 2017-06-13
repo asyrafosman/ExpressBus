@@ -20,5 +20,10 @@ namespace ExpressBus.Admin
             Session.Add("id", id);
             Response.Redirect("AdminStation.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddStation.aspx");
+        }
     }
 }

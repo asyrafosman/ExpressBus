@@ -13,7 +13,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Bus Stations</h3>
                     <br/>
-                    <asp:Button ID="Button1" runat="server" class="form-control" Text="Add New Station" />
+                    <asp:Button ID="Button1" runat="server" class="form-control" Text="Add New Station" OnClick="Button1_Click" />
                 </div>
 
                 <div class="panel-body panel-body-table">
@@ -22,7 +22,7 @@
                      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                          <Columns>
                              <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                             <asp:BoundField DataField="name" HeaderText="Name" SortExpression="name" />
+                             <asp:BoundField DataField="stationname" HeaderText="Station Name" SortExpression="stationname" />
                              <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
                              <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
