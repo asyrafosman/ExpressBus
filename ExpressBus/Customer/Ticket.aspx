@@ -289,7 +289,7 @@
     </div>
 </body>
 <div class="container" align="center">
-    <h4><a href="index.jsp">Back</a></h4>
+    <h4><a href="Default.aspx">Back</a></h4>
     <script>
         alert("Please print your ticket.");
     </script>

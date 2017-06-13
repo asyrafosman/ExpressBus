@@ -30,5 +30,7 @@ namespace ExpressBus.Customer
                 lblTime.Text = Session["depart"].ToString();
             }
         }
+
+        
     }
 }
