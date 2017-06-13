@@ -22,7 +22,7 @@
                             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                             </div></td>
                     </tr>
-                    <tr class="success">
+                    <tr>
                         <th><div style="color:black">Bus Number</div></th>
                         <td class="info"><div style="color:black"><asp:Label ID="Label11" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
