@@ -18,44 +18,49 @@
                 <table class="table table-hover">
                     <tr class="success">
                         <th><div style="color:black">Full Name</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.customers.fname}" /></div></td>
+                        <td class="info"><div style="color:black">
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            </div></td>
                     </tr>
-                    
+                    <tr class="success">
+                        <th><div style="color:black">Bus Number</div></th>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label11" runat="server" Text="Label"></asp:Label></div></td>
+                    </tr>
                     <tr class="success">
                         <th><div style="color:black">Origin</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.origin}" /></div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
                         <th><div style="color:black">Destination</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.destination}" /></div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
                         <th><div style="color:black">Depart Date</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.date}" /></div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
                         <th><div style="color:black">Depart Time</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.realtime}" /></div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label5" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
-                        <th><div style="color:black">Seat Number</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.allseat}" /></div></td>
+                        <th><div style="color:black">Arrival Time</div></th>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
-                        <th><div style="color:black">No Of Passenger</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.no}" /></div></td>
+                        <th><div style="color:black">Duration</div></th>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label7" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
                         <th><div style="color:black">Total Price</div></th>
-                        <td class="info"><div style="color:black">RM <c:out value= "${sessionScope.price}" />0</div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label8" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
                         <th><div style="color:black">Contact No</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.customers.telno}" /></div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label9" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                     <tr class="success">
                         <th><div style="color:black">E-Mail</div></th>
-                        <td class="info"><div style="color:black"><c:out value= "${sessionScope.customers.email}" /></div></td>
+                        <td class="info"><div style="color:black"><asp:Label ID="Label10" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
                 </table>
                     <br/><br/>

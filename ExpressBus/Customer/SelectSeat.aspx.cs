@@ -17,16 +17,13 @@ namespace ExpressBus.Customer
             
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Customer/MakeBooking.aspx");
-        }
+        
 
         protected void BookSeat(object sender, EventArgs e)
         {
             string seatId = (sender as LinkButton).CommandArgument;
             Session.Add("seatId", seatId);
-            Response.Redirect("SelectSeat.aspx");
+            Response.Redirect("Booking.aspx");
         }
     }
 }
