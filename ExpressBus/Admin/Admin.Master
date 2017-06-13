@@ -37,9 +37,9 @@
                         <!-- Logo -->
                         <a href="#" class="logo">
                             <!-- mini logo for sidebar mini 50x50 pixels -->
-                            <span class="logo-mini"><b>S</b>E</span>
+                            <span class="logo-mini"><b>E</b>B</span>
                             <!-- logo for regular state and mobile devices -->
-                            <span class="logo-lg"><b>Sedap</b>Express</span>
+                            <span class="logo-lg"><b>Express</b>Bus</span>
                         </a>
 
                         <!-- Header Navbar: style can be found in header.less -->
@@ -74,7 +74,7 @@
                             <!-- Sidebar user panel -->
                             <div class="user-panel">
                                 <div class="pull-left image">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="img/bus-icon.jpg" class="img-circle" alt="User Image">
                                 </div>
                                 <div class="pull-left info">
                                     <p>Gaben</p>
@@ -88,6 +88,7 @@
                                 <li><a href="AdminBusStation.aspx"><i class="fa fa-circle-o text-yellow"></i><span>Station</span></a></li>
                                 <li><a href="AdminCustomer.aspx"><i class="fa fa-circle-o text-aqua"></i><span>Customer</span></a></li>
                                 <li><a href="AdminBus.aspx"><i class="fa fa-circle-o text-purple"></i><span>Bus</span></a></li>
+                                <li><a href="AdminSeat.aspx"><i class="fa fa-circle-o text-green"></i><span>Seat</span></a></li>
                             </ul>
                         </section>
                         <!-- /.sidebar -->

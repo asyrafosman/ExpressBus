@@ -73,7 +73,9 @@
     </Content>
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\theme-default.css" />
     <Content Include="Customer\Booking.aspx" />
+    <Content Include="Customer\ContactUs.aspx" />
     <Content Include="Customer\Default.aspx" />
     <Content Include="Customer\Login.aspx" />
     <Content Include="Customer\Register.aspx" />
@@ -209,6 +211,14 @@
     <Content Include="img\paid.png" />
     <Content Include="img\panels.png" />
     <Content Include="img\pay.jpg" />
+    <Content Include="img\profile\acap.jpg" />
+    <Content Include="img\profile\acap2.jpg" />
+    <Content Include="img\profile\amir.jpg" />
+    <Content Include="img\profile\amir2.jpg" />
+    <Content Include="img\profile\amir3.jpg" />
+    <Content Include="img\profile\amir4.jpg" />
+    <Content Include="img\profile\naim.jpg" />
+    <Content Include="img\profile\shah.jpg" />
     <Content Include="img\prohibited.png" />
     <Content Include="img\register.jpg" />
     <Content Include="img\rejected.png" />
@@ -744,6 +754,13 @@
     <Compile Include="Customer\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\Customer.Master.cs">
       <DependentUpon>Customer.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -837,6 +854,7 @@
     <Folder Include="Admin\bootstrap\" />
     <Folder Include="Admin\build\" />
     <Folder Include="Admin\dist\" />
+    <Folder Include="Admin\img\" />
     <Folder Include="Admin\plugins\" />
     <Folder Include="js\plugins\fileinput\fileinput\" />
   </ItemGroup>
