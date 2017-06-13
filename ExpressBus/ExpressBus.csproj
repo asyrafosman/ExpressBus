@@ -75,7 +75,6 @@
     <Content Include="Customer\Booking.aspx" />
     <Content Include="Customer\Default.aspx" />
     <Content Include="Customer\Login.aspx" />
-    <Content Include="Customer\MakeBooking.aspx" />
     <Content Include="Customer\Register.aspx" />
     <Content Include="Customer\Schedule.aspx" />
     <Content Include="Customer\SelectBus.aspx" />
@@ -1060,13 +1059,6 @@
     </Compile>
     <Compile Include="Customer\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\MakeBooking.aspx.cs">
-      <DependentUpon>MakeBooking.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Customer\MakeBooking.aspx.designer.cs">
-      <DependentUpon>MakeBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
