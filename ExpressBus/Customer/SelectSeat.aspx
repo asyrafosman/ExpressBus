@@ -181,32 +181,7 @@
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [BusSeat]"></asp:SqlDataSource>
-        
-
-        <br />
-        <img src="../img/available_seat_img.gif" style="background-clip: padding-box; background-color: #99d6ff; border-radius: 10px;" />Available Seat
-                &nbsp;
-                <img src="../img/available_seat_img.gif" style="background-clip: padding-box; background-color: #00ff00; border-radius: 10px;" />Selected Seat
-                &nbsp;
-                <img src="../img/available_seat_img.gif" style="background-clip: padding-box; background-color: #ff4d4d; border-radius: 10px;" />Booked Seat
-
-                <br />
-        <br />
-
-       
     </div>
-
-    <hr>
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <center><a href ="twitter.com/aamiruddinn"><p>&copy; aa</p></a></center>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
-
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
 

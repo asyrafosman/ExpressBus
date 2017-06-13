@@ -14,10 +14,11 @@ namespace ExpressBus.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["uname"] == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
-
-        
 
         protected void BookSeat(object sender, EventArgs e)
         {
