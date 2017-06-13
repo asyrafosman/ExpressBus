@@ -159,7 +159,7 @@
                 <%--<asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />--%>
                 <asp:TemplateField HeaderText="Status" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                     <ItemTemplate>
-                     <asp:Label ID="Status" runat="server" Text='<%# Eval("status").ToString() == "0" ? "Available" : "Booked" %>'></asp:Label>
+                     <asp:Label ID="Status" runat="server" Text='<%# Eval("sstatus").ToString() == "0" ? "Available" : "Booked" %>'></asp:Label>
                         
                     </ItemTemplate>
                     </asp:TemplateField>

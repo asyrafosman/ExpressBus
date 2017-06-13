@@ -40,7 +40,7 @@ namespace ExpressBus.Customer
 
         protected void btnContactUs_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ContactUs.aspx");
         }
 
         protected void btnProfile_Click(object sender, EventArgs e)
