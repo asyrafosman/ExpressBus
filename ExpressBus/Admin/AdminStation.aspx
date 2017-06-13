@@ -22,6 +22,13 @@
                              <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                              <asp:BoundField DataField="name" HeaderText="Name" SortExpression="name" />
                              <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+                             <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("id") %>'
+                                            OnClick="DeleteStation">
+                                        <span class="fa fa-search fa-lg"></span></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                          </Columns>
                      </asp:GridView>
                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Station]"></asp:SqlDataSource>
