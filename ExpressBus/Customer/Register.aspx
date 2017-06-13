@@ -63,7 +63,7 @@
                         <label>Full Name</label>
                         <div class="input-group">
                             <span class="input-group-addon">
-                                <i class="fa fa-id-card" aria-hidden="true"></i>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
                             </span>
                             <asp:TextBox ID="txtFullName" runat="server" class="form-control"></asp:TextBox>
                         </div>
