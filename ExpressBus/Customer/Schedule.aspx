@@ -31,7 +31,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-arrow-up" style="width: auto"></i>
                     </span>
-                    <asp:DropDownList ID="ddlOrigin" runat="server" class="form-control" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlOrigin" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Station] WHERE ([status] = @status)">
                         <SelectParameters>
                             <asp:Parameter DefaultValue="1" Name="status" Type="Int32" />
@@ -46,7 +46,7 @@
                     <span class="input-group-addon">
                         <i class="fa fa-arrow-down" style="width: auto"></i>
                     </span>
-                    <asp:DropDownList ID="ddlDestination" runat="server" class="form-control" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlDestination" runat="server" class="form-control" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="name"></asp:DropDownList>
                 </div>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please select your destination" ControlToValidate="ddlDestination" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
