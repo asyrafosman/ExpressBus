@@ -49,22 +49,22 @@ namespace ExpressBus.Customer {
         protected global::System.Web.UI.WebControls.Panel pnlLogin;
         
         /// <summary>
-        /// btnLogin control.
+        /// lbtnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnLogin;
         
         /// <summary>
-        /// btnContactUs control.
+        /// lbtnContactUs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnContactUs;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnContactUs;
         
         /// <summary>
         /// pnlLogout control.
@@ -74,6 +74,15 @@ namespace ExpressBus.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlLogout;
+        
+        /// <summary>
+        /// lbtnProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnProfile;
         
         /// <summary>
         /// btnLogout control.
