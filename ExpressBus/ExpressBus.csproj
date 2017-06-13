@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AdminBooking.aspx" />
+    <Content Include="Admin\AdminBus.aspx" />
+    <Content Include="Admin\AdminCustomer.aspx" />
+    <Content Include="Admin\AdminStation.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="App_Data\ExpressBusDB.mdf" />
     <Content Include="App_Data\ExpressBusDB_log.ldf">
@@ -1002,6 +1005,27 @@
     </Compile>
     <Compile Include="Admin\AdminBooking.aspx.designer.cs">
       <DependentUpon>AdminBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminBus.aspx.cs">
+      <DependentUpon>AdminBus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminBus.aspx.designer.cs">
+      <DependentUpon>AdminBus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCustomer.aspx.cs">
+      <DependentUpon>AdminCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCustomer.aspx.designer.cs">
+      <DependentUpon>AdminCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminStation.aspx.cs">
+      <DependentUpon>AdminStation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminStation.aspx.designer.cs">
+      <DependentUpon>AdminStation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

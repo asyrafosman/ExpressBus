@@ -14,7 +14,7 @@
             <h3 class="panel-title">ALL SEATS (Booked:
                 <c:out value="${requestScope.booked}" />
                 , Available:
-                <c:out value="${requestScope.available}" />
+                <c:out value="${requestScope.availablex}" />
                 )</h3>
         </div>
         <div class="panel-body panel-body-table">

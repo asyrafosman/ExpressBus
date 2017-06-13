@@ -31,7 +31,7 @@
                             <tbody>
                                 <tr>
                                     <td class="text-center"></td>
-                                    <td><strong></strong></td>
+                                    <td><strong>Gaben</strong></td>
                                     <td></td>
                                     <td class="text-center"><span class="label label-danger">NOT ACTIVE</span></td>
                                     <td class="text-center">Enable</td>
