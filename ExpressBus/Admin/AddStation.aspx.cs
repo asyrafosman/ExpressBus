@@ -29,7 +29,7 @@ namespace ExpressBus.Admin
                 {
                     SqlCommand cmd = new SqlCommand("StationInsert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("stationname", txtStation.Text);
+                    cmd.Parameters.AddWithValue("sname", txtStation.Text);
                     
                     cmd.Connection = conn;
                     cmd.ExecuteNonQuery();
