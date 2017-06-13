@@ -64,7 +64,7 @@
                     </tr>
                 </table>
                     <br/><br/>
-                <div class="form-group" id="demo1" style="display:none;">
+                <div class="form-group text-center" id="demo1" style="display:none;">
                     <legend><div style="color:white">Credit card payment</div></legend>
                     <p style='text-align: center'>We accept:</p>
                     <label><img src='../img/cards/visae.png'/></label>
