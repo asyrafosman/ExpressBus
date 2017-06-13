@@ -22,7 +22,7 @@
                             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                             </div></td>
                     </tr>
-                    <tr class="success">
+                    <tr>
                         <th><div style="color:black">Bus Number</div></th>
                         <td class="info"><div style="color:black"><asp:Label ID="Label11" runat="server" Text="Label"></asp:Label></div></td>
                     </tr>
@@ -64,15 +64,15 @@
                     </tr>
                 </table>
                     <br/><br/>
-                <div class="form-group" id="demo1" style="display:none;">
+                <div class="form-group text-center" id="demo1" style="display:none;">
                     <legend><div style="color:white">Credit card payment</div></legend>
                     <p style='text-align: center'>We accept:</p>
-                    <label><img src='img/cards/visae.png'/></label>
-                    <label><img src='img/cards/visa.png'/></label>
-                    <label><img src='img/cards/mastercard.png'/></label>
-                    <label><img src='img/cards/cirrus.png'/></label>
-                    <label><img src='img/cards/amex.png'/></label>
-                    <label><img src='img/cards/paypal.png'/></label>
+                    <label><img src='../img/cards/visae.png'/></label>
+                    <label><img src='../img/cards/visa.png'/></label>
+                    <label><img src='../img/cards/mastercard.png'/></label>
+                    <label><img src='../img/cards/cirrus.png'/></label>
+                    <label><img src='../img/cards/amex.png'/></label>
+                    <label><img src='../img/cards/paypal.png'/></label>
                     <input name="alasan" style="text-align:center;" type="text" class="form-control" required/>
                     <small>Your information is secure.</small>
                     <br/><br/>
