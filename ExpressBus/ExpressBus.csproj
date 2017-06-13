@@ -114,6 +114,7 @@
     <Content Include="img\blueimp\video-play.svg" />
     <Content Include="img\boiler.jpg" />
     <Content Include="img\booked_seat_img.gif" />
+    <Content Include="img\BUS SEAT.png" />
     <Content Include="img\bus-login.jpg" />
     <Content Include="img\bus.jpg" />
     <Content Include="img\bus.png" />

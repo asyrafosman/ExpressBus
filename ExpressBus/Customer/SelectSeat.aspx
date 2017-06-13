@@ -146,11 +146,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <h3 style="text-align: center; font-family: 'BebasNeueRegular'">Select Your seat</h3>
+    <%--<h3 style="text-align: center; font-family: 'BebasNeueRegular'">Select Your seat</h3>--%>
     <br />
 
     <div align="center">
-        <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="seat" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="50%">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/BUS SEAT.png" Width="1000px" />
+        <div style="height:200px; overflow:auto"">
+        <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="seat" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="50%" ShowHeader = "false">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="seat" HeaderText="Seat Number" InsertVisible="False" ReadOnly="True" SortExpression="seat" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle" />
@@ -181,6 +183,7 @@
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [BusSeat]"></asp:SqlDataSource>
+            </div>
     </div>
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
