@@ -53,8 +53,7 @@
                     <asp:Panel ID="pnlLogout" runat="server" Visible="False">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a>
-                                    <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-danger" OnClick="btnLogout_Click" CausesValidation="False" /></a>
+                                <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CausesValidation="False">Logout</asp:LinkButton>
                             </li>
                         </ul>
                     </asp:Panel>
