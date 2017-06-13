@@ -64,7 +64,7 @@
                 </asp:ContentPlaceHolder>
                 <hr />
                 <footer>
-                    <h4>&copy; copy; <%: DateTime.Now.Year %> Express Bus Sdn Bhd. All rights reserved.</h4>
+                    <h4>&copy; <%: DateTime.Now.Year %> Express Bus Sdn Bhd. All rights reserved.</h4>
                 </footer>
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
