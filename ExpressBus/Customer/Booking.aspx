@@ -67,12 +67,12 @@
                 <div class="form-group" id="demo1" style="display:none;">
                     <legend><div style="color:white">Credit card payment</div></legend>
                     <p style='text-align: center'>We accept:</p>
-                    <label><img src='img/cards/visae.png'/></label>
-                    <label><img src='img/cards/visa.png'/></label>
-                    <label><img src='img/cards/mastercard.png'/></label>
-                    <label><img src='img/cards/cirrus.png'/></label>
-                    <label><img src='img/cards/amex.png'/></label>
-                    <label><img src='img/cards/paypal.png'/></label>
+                    <label><img src='../img/cards/visae.png'/></label>
+                    <label><img src='../img/cards/visa.png'/></label>
+                    <label><img src='../img/cards/mastercard.png'/></label>
+                    <label><img src='../img/cards/cirrus.png'/></label>
+                    <label><img src='../img/cards/amex.png'/></label>
+                    <label><img src='../img/cards/paypal.png'/></label>
                     <input name="alasan" style="text-align:center;" type="text" class="form-control" required/>
                     <small>Your information is secure.</small>
                     <br/><br/>

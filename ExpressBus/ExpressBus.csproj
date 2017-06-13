@@ -65,7 +65,6 @@
     <Content Include="Admin\AdminBus.aspx" />
     <Content Include="Admin\AdminCustomer.aspx" />
     <Content Include="Admin\AdminStation.aspx" />
-    <Content Include="Admin\Default.aspx" />
     <Content Include="App_Data\ExpressBusDB.mdf" />
     <Content Include="App_Data\ExpressBusDB_log.ldf">
       <DependentUpon>ExpressBusDB.mdf</DependentUpon>
@@ -1024,13 +1023,6 @@
     </Compile>
     <Compile Include="Admin\AdminStation.aspx.designer.cs">
       <DependentUpon>AdminStation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\Booking.aspx.cs">
       <DependentUpon>Booking.aspx</DependentUpon>

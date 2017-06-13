@@ -70,7 +70,18 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="../js/bootstrap.min.js"></script>
-        </div>
+            <script> 
+                function showInput() {
+                    document.getElementById('demo1').style.display = 'block';
+                    document.getElementById('demo2').style.display = 'none';
+                }
+
+                function hideInput() {
+                    document.getElementById('demo1').style.display = 'none';
+                    document.getElementById('demo2').style.display = 'block';
+                }
+            </script>
+    </div>
     </form>
 </body>
 </html>

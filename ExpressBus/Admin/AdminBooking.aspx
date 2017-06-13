@@ -21,15 +21,22 @@
                                 <asp:BoundField DataField="busNo" HeaderText="Bus No" SortExpression="busNo" />
                                 <asp:BoundField DataField="date" HeaderText="Date" SortExpression="date" />
                                 <asp:BoundField DataField="seatNo" HeaderText="Seat No" SortExpression="seatNo" />
+                                <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("id") %>'
+                                            OnClick="DeleteBooking">
+                                        <span class="fa fa-search fa-lg"></span></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                               
+
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Booking]"></asp:SqlDataSource>
                     </div>
-
-                </div><!-- end Table for customer-->
-                
+                </div>
+                <!-- end Table for customer-->
             </div>
-
         </div>
     </div>
 </asp:Content>

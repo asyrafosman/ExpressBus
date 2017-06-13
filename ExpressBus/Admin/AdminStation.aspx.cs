@@ -13,5 +13,12 @@ namespace ExpressBus.Admin
         {
 
         }
+
+        protected void StationDelete(object sender, EventArgs e)
+        {
+            string id = (sender as LinkButton).CommandArgument;
+            Session.Add("id", id);
+            Response.Redirect("AdminStation.aspx");
+        }
     }
 }
