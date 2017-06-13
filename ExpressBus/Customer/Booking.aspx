@@ -143,7 +143,7 @@
         <br />
         <br />
         <button type="button" class="btn btn-default" onclick="hideInput()">Back</button>
-        <button type="submit" class="btn btn-success">Pay</button>
+        <asp:Button ID="btnPay" runat="server" Text="Pay" class="btn btn-success" OnClick="btnPay_Click"/>
     </div>
 
     <div class="form-group text-center" id="demo2">
