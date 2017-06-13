@@ -78,6 +78,7 @@
     <Content Include="Customer\Schedule.aspx" />
     <Content Include="Customer\SelectBus.aspx" />
     <Content Include="Customer\SelectSeat.aspx" />
+    <Content Include="Customer\Ticket.aspx" />
     <Content Include="Customer\ViewProfile.aspx" />
     <Content Include="fonts\BebasNeue-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1079,6 +1080,13 @@
     </Compile>
     <Compile Include="Customer\SelectSeat.aspx.designer.cs">
       <DependentUpon>SelectSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Ticket.aspx.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\Ticket.aspx.designer.cs">
+      <DependentUpon>Ticket.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer\ViewProfile.aspx.cs">
       <DependentUpon>ViewProfile.aspx</DependentUpon>
