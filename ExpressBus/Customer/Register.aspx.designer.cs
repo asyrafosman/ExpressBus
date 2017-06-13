@@ -76,6 +76,15 @@ namespace ExpressBus.Customer {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
+        /// txtPassword_PasswordStrength control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.PasswordStrength txtPassword_PasswordStrength;
+        
+        /// <summary>
         /// txtContactNo control.
         /// </summary>
         /// <remarks>

@@ -10,7 +10,7 @@ namespace ExpressBus.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["fname"]==null)
+            if (Session["uname"]==null)
             {
                 Response.Redirect("Default.aspx");
             }

@@ -14,17 +14,18 @@ namespace ExpressBus.Customer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["uname"] == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void BtnSubmit_Click(object sender, EventArgs e)
         {
-            Session["Origin"] = DropDownList1.SelectedValue.ToString();
-            Session["Destination"] = DropDownList2.SelectedValue.ToString();
-            
-            Response.Redirect("~/Customer/SelectBus.aspx");
+            Session["Origin"] = ddlOrigin.SelectedValue.ToString();
+            Session["Destination"] = ddlDestination.SelectedValue.ToString();
+            Session["Date"] = txtDate.Text;
+            Response.Redirect("SelectBus.aspx");
         }
-
-        
     }
 }

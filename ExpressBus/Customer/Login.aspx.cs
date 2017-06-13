@@ -42,7 +42,7 @@ namespace ExpressBus.Customer
                     Session["telno"] = drUser["telno"].ToString();
                     Session["email"] = drUser["email"].ToString();
                     conn.Close();
-                    Response.Redirect("MakeBooking.aspx");
+                    Response.Redirect("Schedule.aspx");
                 }
                 else
                 {
