@@ -854,6 +854,7 @@
     <Folder Include="Admin\bootstrap\" />
     <Folder Include="Admin\build\" />
     <Folder Include="Admin\dist\" />
+    <Folder Include="Admin\img\" />
     <Folder Include="Admin\plugins\" />
     <Folder Include="js\plugins\fileinput\fileinput\" />
   </ItemGroup>
