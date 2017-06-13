@@ -42,5 +42,10 @@ namespace ExpressBus.Customer
         {
 
         }
+
+        protected void btnProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewProfile.aspx");
+        }
     }
 }

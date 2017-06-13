@@ -41,17 +41,23 @@
                     <asp:Panel ID="pnlLogin" runat="server">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a>
-                                    <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-warning" OnClick="btnLogin_Click" CausesValidation="False" /></a>
+                               <%-- <a>
+                                    <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-warning" OnClick="btnLogin_Click" CausesValidation="False" /></a>--%>
+                                    <asp:LinkButton ID="lbtnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" CausesValidation="False">Login</asp:LinkButton>
                             </li>
                             <li>
-                                <a>
-                                    <asp:Button ID="btnContactUs" runat="server" Text="Contact Us" class="btn btn-warning"  CausesValidation="False" OnClick="btnContactUs_Click" /></a>
+                               <%-- <a>
+                                    <asp:Button ID="btnContactUs" runat="server" Text="Contact Us" class="btn btn-warning"  CausesValidation="False" OnClick="btnContactUs_Click" /></a>--%>
+                                    <asp:LinkButton ID="lbtnContactUs" runat="server" Text="Contact Us" OnClick="btnContactUs_Click" CausesValidation="False">Contact Us</asp:LinkButton>
                             </li>
                         </ul>
                     </asp:Panel>
                     <asp:Panel ID="pnlLogout" runat="server" Visible="False">
                         <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <asp:LinkButton ID="lbtnProfile" runat="server" Text="Profile" OnClick="btnProfile_Click" CausesValidation="False">Profile</asp:LinkButton>
+                            </li>
+
                             <li>
                                 <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CausesValidation="False">Logout</asp:LinkButton>
                             </li>
