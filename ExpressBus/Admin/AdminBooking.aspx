@@ -14,41 +14,20 @@
                 <!-- Table for customer-->
                 <div class="panel-body panel-body-table">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-actions">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Origin</th>
-                                    <th>Destination</th>
-                                    <th>Depart Date</th>
-                                    <th>Passenger</th>
-                                    <th>Seat No</th>
-                                    <th>Total Price</th>
-                                    <th>Depart Time</th>
-                                    <th>Status</th>
-                                    <th>Customer ID</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>RM </td>
-                                    <td></td>
-                                    <td><span class="label label-warning">IN PROCESS</span></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
+                            <Columns>
+                                <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                                <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+                                <asp:BoundField DataField="busNo" HeaderText="Bus No" SortExpression="busNo" />
+                                <asp:BoundField DataField="date" HeaderText="Date" SortExpression="date" />
+                                <asp:BoundField DataField="seatNo" HeaderText="Seat No" SortExpression="seatNo" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Booking]"></asp:SqlDataSource>
                     </div>
 
                 </div><!-- end Table for customer-->
+                
             </div>
 
         </div>
