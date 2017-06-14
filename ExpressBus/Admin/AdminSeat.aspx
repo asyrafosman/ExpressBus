@@ -5,10 +5,11 @@
 </asp:Content>
 <asp:Content ID="Seat" ContentPlaceHolderID="Seat" runat="server">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6 col-lg-offset-3">
             <div class="panel panel-default">
 
                 <div class="panel-heading">
+                    <h3 class="panel-title">Bus Seat</h3>
                 </div>
                 <div class="panel-body panel-body-table">
                     <div class="table-responsive">
