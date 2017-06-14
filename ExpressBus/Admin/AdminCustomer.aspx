@@ -10,6 +10,9 @@
 
             <!-- START DEFAULT DATATABLE -->
             <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Registered Customer</h3>
+                </div>
                 <div class="panel-body">
                     <div class="table-responsive">
 
