@@ -11,10 +11,7 @@ namespace ExpressBus.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["adminuname"] == null)
-            {
-                Response.Redirect("AdminLogin.aspx");
-            }
+
         }
     }
 }
