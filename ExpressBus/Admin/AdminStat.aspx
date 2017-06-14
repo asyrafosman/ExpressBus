@@ -9,6 +9,16 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    <h3 class="panel-title">Sales Amount By Month</h3>
+                </div>
+                <iframe width="1085" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzFmMDI3NDctNzVlZC00NDFjLWI5N2ItMmQ0MWFmNTk5ZDI4IiwidCI6IjBlMGRiMmFkLWM0MTYtNDdjNy04OGVjLWNlYWM0ZWU3Njc2NyIsImMiOjEwfQ%3D%3D" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     <h3 class="panel-title">Bus Ticket Date</h3>
                 </div>
                 <!-- Table for customer-->
@@ -27,7 +37,7 @@
             </div>
         </div>
     </div>
-        <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -49,7 +59,7 @@
             </div>
         </div>
     </div>
-        <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
