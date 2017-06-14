@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Seat" ContentPlaceHolderID="Seat" runat="server">
     <div class="row">
-        <div class="col-md-6 col-lg-offset-3">
+        <div class="col-md-5 col-lg-offset-3">
             <div class="panel panel-default">
 
                 <div class="panel-heading">
@@ -13,7 +13,7 @@
                 </div>
                 <div class="panel-body panel-body-table">
                     <div class="table-responsive">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="seat" DataSourceID="SqlDataSource1" Width="191px" CssClass="table table-bordered table-striped table-actions">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="seat" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                             <Columns>
                                 <asp:TemplateField HeaderText="No.">
                                     <ItemTemplate>
@@ -28,10 +28,16 @@
                                         <asp:Label ID="Status" runat="server" Text='<%# Eval("sstatus").ToString() == "0" ? "Available" : "Booked" %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                                <asp:TemplateField HeaderText="Enable" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("seat") %>' OnClick="EnableSeat">
-                                        <span class="fa fa-angle-right"></span></asp:LinkButton>
+                                        <span class="fa fa-thumbs-o-up"></span></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Disable" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("seat") %>' OnClick="DisableSeat">
+                                        <span class="fa fa-thumbs-o-down"></span></asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
