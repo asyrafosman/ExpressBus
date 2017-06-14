@@ -25,8 +25,8 @@ namespace ExpressBus.Admin
 
             SqlCommand cmd = new SqlCommand("AdminLogin", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("uname", txtUser.Text);
-            cmd.Parameters.AddWithValue("pw", txtPassword.Text);
+            cmd.Parameters.AddWithValue("uname", txtAdminUser.Text);
+            cmd.Parameters.AddWithValue("pw", txtAdminPassword.Text);
 
             SqlDataReader drUser;
             drUser = cmd.ExecuteReader();

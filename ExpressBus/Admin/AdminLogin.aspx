@@ -63,9 +63,9 @@
                             <span class="input-group-addon">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </span>
-                            <asp:TextBox ID="txtUser" runat="server" class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtAdminUser" runat="server" class="form-control"></asp:TextBox>
                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUser" ErrorMessage="Please enter your username" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtAdminUser" ErrorMessage="Please enter your username" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
@@ -73,9 +73,9 @@
                             <span class="input-group-addon">
                                 <i class="fa fa-key" aria-hidden="true"></i>
                             </span>
-                            <asp:TextBox ID="txtPassword" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtAdminPassword" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Please enter your password" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtAdminPassword" ErrorMessage="Please enter your password" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
                     <asp:Button ID="btnLogin" runat="server" Text="LOGIN" Width="100%" CssClass="btn btn-default" OnClick="btnLogin_Click" />
                 </div>
