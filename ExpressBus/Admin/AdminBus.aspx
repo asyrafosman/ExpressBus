@@ -17,7 +17,14 @@
                     <div class="table-responsive">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="BusId" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                             <Columns>
-                                <asp:BoundField DataField="BusId" HeaderText="Bus ID" ReadOnly="True" SortExpression="BusId" />
+                                <asp:TemplateField HeaderText="No.">
+                                    <ItemTemplate>
+                                        <%#Container.DataItemIndex +1 %>.
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Top" Width="3%" />
+                                </asp:TemplateField>
+                                <%--<asp:BoundField DataField="BusId" HeaderText="Bus ID" ReadOnly="True" SortExpression="BusId" />--%>
                                 <asp:BoundField DataField="Depart" HeaderText="Departure Time" SortExpression="Depart" />
                                 <asp:BoundField DataField="Arrive" HeaderText="Arrival Time" SortExpression="Arrive" />
                                 <asp:BoundField DataField="Origin" HeaderText="Origin" SortExpression="Origin" />
@@ -26,10 +33,11 @@
                                 <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
                                 <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                                 <asp:BoundField DataField="NoSeat" HeaderText="Seat No" SortExpression="NoSeat" />
-                                
+
                                 <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("BusId") %>' OnClick="DeleteBus">
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("BusId") %>'
+                                            OnClick="DeleteBus" OnClientClick="return confirm('Are you sure to delete this bus schedule?');">
                                         <span class="fa fa-times"></span></asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>

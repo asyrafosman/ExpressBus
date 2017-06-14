@@ -16,7 +16,14 @@
                     <div class="table-responsive">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                             <Columns>
-                                <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                                <asp:TemplateField HeaderText="No.">
+                                    <ItemTemplate>
+                                        <%#Container.DataItemIndex +1 %>.
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Top" Width="3%" />
+                                </asp:TemplateField>
+                                <%--<asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />--%>
                                 <asp:BoundField DataField="bstatus" HeaderText="Status" SortExpression="status" />
                                 <asp:BoundField DataField="busNo" HeaderText="Bus No" SortExpression="busNo" />
                                 <asp:BoundField DataField="bdate" HeaderText="Date" SortExpression="date" />
@@ -29,8 +36,6 @@
                                         <span class="fa fa-times"></span></asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                               
-
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Booking]"></asp:SqlDataSource>

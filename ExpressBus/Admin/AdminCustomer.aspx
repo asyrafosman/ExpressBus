@@ -12,16 +12,23 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="table-responsive">
-                        
+
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="custid" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                             <Columns>
-                                <asp:BoundField DataField="custid" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="custid" />
+                                <asp:TemplateField HeaderText="No.">
+                                    <ItemTemplate>
+                                        <%#Container.DataItemIndex +1 %>.
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Top" Width="3%" />
+                                </asp:TemplateField>
+                                <%--<asp:BoundField DataField="custid" HeaderText="Customer ID" InsertVisible="False" ReadOnly="True" SortExpression="custid" />--%>
                                 <asp:BoundField DataField="fname" HeaderText="Full Name" SortExpression="fname" />
                                 <asp:BoundField DataField="uname" HeaderText="Username" SortExpression="uname" />
                                 <asp:BoundField DataField="pw" HeaderText="Password" SortExpression="pw" />
                                 <asp:BoundField DataField="telno" HeaderText="Telephone No" SortExpression="telno" />
                                 <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" />
-                                <asp:BoundField DataField="role" HeaderText="Role" SortExpression="role" />
+                                <%--<asp:BoundField DataField="role" HeaderText="Role" SortExpression="role" />--%>
                                 <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("custid") %>'
@@ -31,12 +38,15 @@
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ExpressBusCS %>" SelectCommand="SELECT * FROM [Customer] WHERE ([role] = @role)">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="1" Name="role" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
                     </div>
                 </div>
-            </div><!-- END DEFAULT DATATABLE -->
-
-         </div>
-      </div>
+            </div>
+            <!-- END DEFAULT DATATABLE -->
+        </div>
+    </div>
 </asp:Content>
-
