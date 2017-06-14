@@ -36,11 +36,11 @@ namespace ExpressBus.Admin
             {
                 if (drUser.HasRows)
                 {
-                    Session["fname"] = drUser["fname"].ToString();
-                    Session["uname"] = drUser["uname"].ToString();
-                    Session["pw"] = drUser["pw"].ToString();
-                    Session["telno"] = drUser["telno"].ToString();
-                    Session["email"] = drUser["email"].ToString();
+                    Session["adminfname"] = drUser["fname"].ToString();
+                    Session["adminuname"] = drUser["uname"].ToString();
+                    Session["adminpw"] = drUser["pw"].ToString();
+                    Session["admintelno"] = drUser["telno"].ToString();
+                    Session["adminemail"] = drUser["email"].ToString();
                     conn.Close();
                     Response.Redirect("AdminHome.aspx");
                 }
