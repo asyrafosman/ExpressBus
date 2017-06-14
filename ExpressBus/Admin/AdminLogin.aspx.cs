@@ -25,8 +25,8 @@ namespace ExpressBus.Admin
 
             SqlCommand cmd = new SqlCommand("AdminLogin", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("uname", txtUser.Text);
-            cmd.Parameters.AddWithValue("pw", txtPassword.Text);
+            cmd.Parameters.AddWithValue("uname", txtAdminUser.Text);
+            cmd.Parameters.AddWithValue("pw", txtAdminPassword.Text);
 
             SqlDataReader drUser;
             drUser = cmd.ExecuteReader();
@@ -36,11 +36,11 @@ namespace ExpressBus.Admin
             {
                 if (drUser.HasRows)
                 {
-                    Session["fname"] = drUser["fname"].ToString();
-                    Session["uname"] = drUser["uname"].ToString();
-                    Session["pw"] = drUser["pw"].ToString();
-                    Session["telno"] = drUser["telno"].ToString();
-                    Session["email"] = drUser["email"].ToString();
+                    Session["adminfname"] = drUser["fname"].ToString();
+                    Session["adminuname"] = drUser["uname"].ToString();
+                    Session["adminpw"] = drUser["pw"].ToString();
+                    Session["admintelno"] = drUser["telno"].ToString();
+                    Session["adminemail"] = drUser["email"].ToString();
                     conn.Close();
                     Response.Redirect("AdminHome.aspx");
                 }

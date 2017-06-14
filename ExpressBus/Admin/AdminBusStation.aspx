@@ -21,9 +21,15 @@
                     <div class="table-responsive">
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1" CssClass="table table-bordered table-striped table-actions">
                             <Columns>
-                                <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                                <asp:TemplateField HeaderText="No.">
+                                    <ItemTemplate>
+                                        <%#Container.DataItemIndex +1 %>.
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                                    <ItemStyle HorizontalAlign="Center" VerticalAlign="Top" Width="3%" />
+                                </asp:TemplateField>
+                                <%--<asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />--%>
                                 <asp:BoundField DataField="stationname" HeaderText="Station Name" SortExpression="stationname" />
-                                
                                 <asp:TemplateField HeaderText="Status" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
                                         <asp:Label ID="Status" runat="server" Text='<%# Eval("stationstatus").ToString() == "0" ? "Available" : "Not Available" %>'></asp:Label>
@@ -37,7 +43,8 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("id") %>' OnClick="DeleteStation">
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("id") %>'
+                                            OnClick="DeleteStation" OnClientClick="return confirm('Are you sure to delete this station?');">
                                         <span class="fa fa-times"></span></asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
