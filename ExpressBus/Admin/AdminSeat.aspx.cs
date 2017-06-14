@@ -40,5 +40,26 @@ namespace ExpressBus.Admin
 
             Response.Redirect("AdminSeat.aspx");
         }
+
+        protected void DisableSeat(object sender, EventArgs e)
+        {
+            string id = (sender as LinkButton).CommandArgument;
+            Session.Add("seat", id);
+
+            string connStr = ConfigurationManager.ConnectionStrings["ExpressBusCS"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("SeatstatusDisable", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("seat", id);
+
+
+
+            cmd.ExecuteNonQuery();
+
+
+            Response.Redirect("AdminSeat.aspx");
+        }
     }
 }

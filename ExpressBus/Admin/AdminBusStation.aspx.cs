@@ -62,6 +62,27 @@ namespace ExpressBus.Admin
             Response.Redirect("AdminBusStation.aspx");
         }
 
+        protected void DisableStation(object sender, EventArgs e)
+        {
+            string id = (sender as LinkButton).CommandArgument;
+            Session.Add("id", id);
+
+            string connStr = ConfigurationManager.ConnectionStrings["ExpressBusCS"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("StationStatusDisable", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("id", id);
+
+
+
+            cmd.ExecuteNonQuery();
+
+
+            Response.Redirect("AdminBusStation.aspx");
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("AddStation.aspx");
