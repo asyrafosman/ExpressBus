@@ -28,16 +28,16 @@
                                         <asp:Label ID="Status" runat="server" Text='<%# Eval("sstatus").ToString() == "0" ? "Available" : "Booked" %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Enable" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
-                                    <ItemTemplate>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("seat") %>' OnClick="EnableSeat">
-                                        <span class="fa fa-thumbs-o-up"></span></asp:LinkButton>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Disable" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("seat") %>' OnClick="DisableSeat">
+                                        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("seat") %>' OnClick="EnableSeat">
                                         <span class="fa fa-thumbs-o-down"></span></asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Enable" SortExpression="status" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Middle" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("seat") %>' OnClick="DisableSeat">
+                                        <span class="fa fa-thumbs-o-up"></span></asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
